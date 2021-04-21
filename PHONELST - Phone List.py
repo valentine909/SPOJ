@@ -9,10 +9,8 @@ for _ in range(number_of_cases):
 
     def check():
         for j in range(number_of_phone_numbers - 1):
-            for k in range(j + 1, number_of_phone_numbers):
-                if list_of_numbers[k].startswith(list_of_numbers[j]):
-                    return 'NO'
+            if list_of_numbers[j + 1].startswith(list_of_numbers[j]):
+                return 'NO'
         return 'YES'
-
 
     print(check())
